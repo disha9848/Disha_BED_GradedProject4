@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "863c8ff7-4e85-4ea2-92c6-3a13a02dd12a",
+		"name": "EmplayeeManagement-RestAPI's-Finalized",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "To fetch all employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employees",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To fetch all employees by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employees/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To fetch all employees in increasing order of their firstName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees/sort?order=\"asc\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "\"asc\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By default sort by firstName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employees/sort",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"sort"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sort by firstName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employees/sort?sortBy=firstName",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "firstName"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch by pageSize",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employees/sort?pageSize=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sort by lastName along with pageSize",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employees/sort?pageSize=2&sortBy=lastName",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "2"
+						},
+						{
+							"key": "sortBy",
+							"value": "lastName"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sort by pageNo and lastName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employees/sort?pageNo=0&sortBy=lastName",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "0"
+						},
+						{
+							"key": "sortBy",
+							"value": "lastName"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sort by lastName along with pageNo and pageSize",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employees/sort?pageNo=0&sortBy=lastName&pageSize=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "0"
+						},
+						{
+							"key": "sortBy",
+							"value": "lastName"
+						},
+						{
+							"key": "pageSize",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To fetch all employees by firstName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employees/firstName/sita",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"firstName",
+						"sita"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To fetch all roles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/roles",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To fetch all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn/LogIn for access token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\" : \"Admin\",\n    \"password\" : \"Admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To create new employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Aarti\",\n    \"lastName\": \"Sharma\",\n    \"email\": \"aarti_sharma@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/employees/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To create new role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"roleName\" : \"ASSISTANT_MANAGER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/roles/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To create new user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"username\" : \"Aarti\",\n    \"password\" : \"Aarti\",\n    \"roles\" : [{\n        \"roleId\" : 3,\n        \"roleName\" : \"USER\"\n    }]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/users/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To update an employee data by Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Avaneet\",\n    \"lastName\": \"Kaur\",\n    \"email\": \"avaneet_kaur_123@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/employees/update/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"update",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To delete an employee by Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employees/delete/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"delete",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
